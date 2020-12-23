@@ -26,6 +26,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: slide-in 0.5s ease-in
 }
 
 .sub-header-container {
@@ -38,11 +40,17 @@ header {
     margin-top: -5%;
     font-size: 40px;
     font-weight: 700;
+
+    animation: slide-in 0.5s ease-in;
+    animation-delay: 0.4s;
 }
 
 .sub-header-content h1 span {
     color: var(--Gray);
     font-weight: lighter;
+
+    animation: slide-in 0.5s ease-in;
+    animation-delay: 0.4s;
 }
 
 .sub-header-content p {
@@ -50,6 +58,9 @@ header {
     text-align: center;
     font-weight: 300;
     letter-spacing: 0.5px;
+
+    animation: scale-up 0.5s ease-in;
+    animation-delay: 0.4s;
 }
 
 form {
@@ -73,7 +84,11 @@ input[type="text"] {
     border: 1px solid var(--PaleBlue);
     outline: none;
     font-family: 'Libre Franklin' sans-serif;
+
+    animation: scale-up 0.5s ease-in;
+    animation-delay: 0.5s;
 }
+
 
 input:focus {
     border: 1px solid var(--Gray);
@@ -115,6 +130,9 @@ input:invalid {
     outline: none;
     cursor: pointer;
     font-family: 'Libre Franklin' sans-serif;
+
+    animation: scale-up 0.5s ease-in;
+    animation-delay: 1s;
 }
 
 .btn:hover {
@@ -136,6 +154,9 @@ input:invalid {
 #illustration {
     width: 40%;
     margin-top: 2%;
+
+    animation: slide-in-bottom 0.5s ease;
+    animation-delay: 1s;
 }
 
 .social-container {
@@ -157,6 +178,21 @@ input:invalid {
     border: 1px solid var(--PaleBlue);
     padding: 10px;
     border-radius: 50%;
+
+    animation: slide-in-bottom 0.5s ease;
+    animation-delay: 1.3s;
+}
+
+.fab:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+.fab:nth-child(2) {
+    animation-delay: 1.7s;
+}
+
+.fab:nth-child(3) {
+    animation-delay: 2s;
 }
 
 .fab:hover {
@@ -184,6 +220,37 @@ input:invalid {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+  
+@keyframes slide-in-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+  
+@keyframes scale-up {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
 }
 
 @media screen and (max-width: 812px) {

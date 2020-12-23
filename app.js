@@ -22,3 +22,40 @@ submitBtn.addEventListener('click', () => {
         }
     }
 });
+
+
+// Animation 
+document.querySelector('#h1').style.opacity = 0;
+document.querySelector('#logo').style.opacity = 0;
+document.querySelector('#span').style.opacity = 0;
+document.querySelector('#p').style.opacity = 0;
+document.querySelector('#email').style.opacity = 0;
+document.querySelector('.btn').style.opacity = 0;
+document.querySelector('#illustration').style.opacity = 0;
+document.querySelector('.social-content').style.opacity = 0;
+
+setTimeout(() => {
+    document.querySelector('#logo').style.opacity = 1;
+}, 100);
+
+setTimeout(() => {
+    document.querySelector('#h1').style.opacity = 1;
+    document.querySelector('#span').style.opacity = 1;
+}, 500);
+
+setTimeout(() => {
+    document.querySelector('#p').style.opacity = 1;
+}, 550);
+
+setTimeout(() => {
+    document.querySelector('#email').style.opacity = 1;
+    document.querySelector('.btn').style.opacity = 1;
+}, 600);
+
+setTimeout(() => {
+    document.querySelector('#illustration').style.opacity = 1;
+}, 1200);
+
+setTimeout(() => {
+    document.querySelector('.social-content').style.opacity = 1;
+}, 1500);
